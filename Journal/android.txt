@@ -1,0 +1,3 @@
+title: Journal
+author: Alek Westover
+orientation: portrait

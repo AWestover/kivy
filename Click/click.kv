@@ -1,0 +1,18 @@
+<ClickObj>:
+	canvas.before:
+		Color:
+			rgb: (self.r,self.g,self.b)
+		Rectangle:
+			pos: 0,0
+			size: self.size
+	canvas:
+		Color:
+			rgb: 0,0,0
+		Rectangle:
+			pos: self.x, self.y
+			size: 100,100
+
+	Label:
+		text: root.t
+		font_size: 50
+		pos: 200, 200
