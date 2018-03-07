@@ -16,7 +16,7 @@ the file making issue I thought existed might not exist...
 """
 
 updates_per_sec = 10
-TRIALS = 3
+TRIALS = 5
 data_folder = "data"
 txtf  = join(os.getcwd(), join(data_folder, "test.txt"))
 
@@ -32,7 +32,7 @@ class ClickObj(Widget):
         self.y = 10
         self.time = 0
         self.mu = 10  # average difference (time steps)
-        self.sigma = 1 # standard deviation (time steps)
+        self.sigma = 3 # standard deviation (time steps)
         self.shots = [self.set_next_shot(0)]
         self.clicks = []
 
@@ -77,8 +77,11 @@ class ClickObj(Widget):
             now.year, now.month, now.day, now.hour, now.minute)
         self.t = 'done'
         errors = []
+        score = 0
         for i in range(0, TRIALS):
-            errors.append(str(self.clicks[i]-self.shots[i]))
+            cur = self.clicks[i]-self.shots[i]
+            score += cur**2
+            errors.append(str(cur))
         next_row = [c_id] + errors
         nr = ",".join(next_row)
 
@@ -90,7 +93,7 @@ class ClickObj(Widget):
         with open('data.csv') as f:
             for r in f:
                 ct+=1
-        self.t='done: '+str(ct)
+        self.t='done: '+ str(ct) + ", Score (squared error): " + str(score)
 
 class ClickApp(App):
     def build(self):

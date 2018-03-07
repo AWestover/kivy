@@ -14,6 +14,7 @@ freq = 10
 
 """
 Note: do fourier transform too!!!
+text: str(root.area)
 """
 
 class GraphShow(Widget):
@@ -22,7 +23,7 @@ class GraphShow(Widget):
     def init(self):
         self.time = 0
         self.exp_avg = 0
-        self.alpha = 0.5
+        self.alpha = 0.2
         self.last_pos = [0,0]
 
     def update(self, dt):
