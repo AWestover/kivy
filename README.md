@@ -21,4 +21,34 @@ you might need buildozer to compile it into something to put on the Play Store..
 probably need a mac to make an IOS compatable app.
 
 
+# NOTES
 
+YOU CAN MAKE AN APK!!!!!! (theoretically comprable thing exists for ios...)
+
+USE buildozer==0.30
+
+it actually works, I think later versions are broken...
+
+for now you have to copy paste over the apk once it is compiled
+
+put it in some directory and then click install
+
+you will be asked if you want to download from "unknown source"
+
+Temporarily allow this (seems dangerous to permanantely do this... setting is found under secutiry in settings)
+
+there you go!!
+
+# buildozer
+
+pretty easy 
+
+use version 0.30
+
+say 
+
+buildozer android debug deploy
+
+pretty much
+
+not much usefull stuff in config file...
