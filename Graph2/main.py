@@ -6,7 +6,6 @@ from kivy.clock import Clock
 from random import random
 from kivy.app import App
 import math
-import pdb
 
 updates_per_sec = 10
 pix_per_update = 10

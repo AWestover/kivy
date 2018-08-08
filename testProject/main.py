@@ -1,5 +1,5 @@
 import kivy
-kivy.require('1.0.0')
+#kivy.require('1.0.0')
 
 from kivy.app import App
 from kivy.uix.button import Button

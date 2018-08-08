@@ -1,4 +1,0 @@
-title=Graph2
-author=Alek
-orientation=landscape
-icon.filename = %(source.dir)s/shark.png
